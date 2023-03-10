@@ -3,11 +3,27 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Random Number Generator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 		body {
 			font-family: sans-serif;
-			text-align: center;
-			margin-top: 50px;
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+		h1 {
+			font-size: 32px;
+			margin-top: 0;
+		}
+		p {
+			font-size: 24px;
+			margin-bottom: 20px;
 		}
 		button {
 			padding: 10px 20px;
@@ -17,18 +33,22 @@
 			border: none;
 			border-radius: 4px;
 			cursor: pointer;
+			margin-bottom: 20px;
 		}
-        #output {
-            font-size: 42px;
-            font-weight: bold;
-        }
+		#output {
+			font-size: 42px;
+			font-weight: bold;
+			margin-bottom: 0;
+		}
 	</style>
 </head>
 <body>
-	<h1>Random Number Generator</h1>
-	<p>Press the button to generate a random 3-digit number:</p>
-	<button onclick="generateNumber()">Generate</button>
-	<p id="output"></p>
+	<div class="container">
+		<h1>Random Number Generator</h1>
+		<p>Press the button to generate a random 3-digit number:</p>
+		<button onclick="generateNumber()">Generate</button>
+		<p id="output"></p>
+	</div>
 
 	<script>
 		function generateNumber() {
